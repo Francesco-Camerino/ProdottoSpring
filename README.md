@@ -1,6 +1,6 @@
 # Applicazione Spring web che gestisce tramite Postman le richieste con un database in memoria H2
 
-- ## Ottieni una lista di prodotti ![Screenshot (17)](https://user-images.githubusercontent.com/102217474/162148299-5f94261f-56bf-4a58-9f59-59c049b8ba3f.png)
+- ## Ottieni una lista di prodotti: ![Screenshot (17)](https://user-images.githubusercontent.com/102217474/162148299-5f94261f-56bf-4a58-9f59-59c049b8ba3f.png)
 - ## Ottieni un prodotto dato un id: ![Screenshot (18)](https://user-images.githubusercontent.com/102217474/162151303-b671b1f4-98f9-4ffb-a2de-0aa7b91fc218.png)
 - ## Ottieni un prodotto dato un nome: ![Screenshot (19)](https://user-images.githubusercontent.com/102217474/162151521-c3b0ab09-32e7-42e6-80a7-1b0481674ba0.png)
 - ## Ottieni un prodotto che si trova tra due date di acquisto: ![Screenshot (20)](https://user-images.githubusercontent.com/102217474/162158026-37d37b51-f70a-4f3c-87e2-8a09437a1e46.png)
