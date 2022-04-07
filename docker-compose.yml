@@ -1,17 +1,17 @@
 version: "3"
 services:
-  usertest:
-    image: usertest:latest
+  prodottotest:
+    image: prodotootest:latest
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: usertest2
+    container_name: prodottotesst
     restart: always
     ports:
       - 8080:8080
     networks:
-      - usertest
+      - prodottotest
 
 networks:
-  usertest:
+  prodottotest:
     external: true

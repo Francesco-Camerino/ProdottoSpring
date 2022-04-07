@@ -11,12 +11,12 @@ public class Prodotto {
     @GeneratedValue
     private Long id;
     private String nome;
-    Date dataAcquisto;
-    Date dataCreazione;
-    Date dataScadenza;
-    float ranking;
-    float prezzo;
-    float quantita;
+    private Date dataAcquisto;
+    private Date dataCreazione;
+    private Date dataScadenza;
+    private float ranking;
+    private float prezzo;
+    private float quantita;
 
     public Prodotto() {
     }

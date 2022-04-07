@@ -25,15 +25,15 @@ public class ProdottoRestController {
         logger.info("Prendo tutti i prodotti");
         return repository.findAll();
     }
-    @GetMapping("/prodotti/ricerca/nome/{nome}")
-    List<Prodotto> cercaPerNome(@PathVariable String nome) {
-        return repository.findByNome(nome);
-    }
-
     @GetMapping("/prodotto/{id}")
     public Prodotto trovaProdottoConID(@PathVariable Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ProdottoNonTrovato(id));
+    }
+
+    @GetMapping("/prodotti/ricerca/nome/{nome}")
+    List<Prodotto> cercaPerNome(@PathVariable String nome) {
+        return repository.findByNome(nome);
     }
 
     @GetMapping("/prodotto/ricercatradateacquisto")
@@ -95,27 +95,7 @@ public class ProdottoRestController {
         return repository.save(nuovoProdotto);
     }
 
-    @PutMapping("/prodotto/{id}")
-    public Prodotto aggiornaDatiProdotto(@PathVariable Long id,
-                                     @RequestBody Prodotto prodotto) {
-        return repository.findById(id).map(
-                /* crea un nuovo prodotto */
-                nuovoProdotto -> {
-                    nuovoProdotto.setNome(prodotto.getNome());
-                    nuovoProdotto.setDataAcquisto(prodotto.getDataAcquisto());
-                    nuovoProdotto.setPrezzo(prodotto.getPrezzo());
-                    return repository.save(nuovoProdotto);
-                }
-        ).orElseGet(
-                () -> {
-                    prodotto.setId(id);
-                    return repository.save(prodotto);
-                }
-
-        );
-    }
-
-    @PutMapping("/prodottoput")
+    @PutMapping("/prodotto")
     public Prodotto aggiornaSingoloProdotto(@RequestBody Prodotto prodotto) {
         return repository.save(prodotto);
     }
